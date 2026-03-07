@@ -1,139 +1,297 @@
-/* Variables de couleurs élégantes */
-:root {
-    --primary: #d4af37; /* Or */
-    --dark: #1a1a1a;    /* Anthracite */
-    --light: #f9f9f9;
-    --white: #ffffff;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Couleurs et Police */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: var(--dark);
-    background-color: var(--light);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    color: #333;
+    background-color: #f9f9f9;
 }
 
-/* Navigation */
+/* Une belle barre de navigation */
 nav {
+    background-color: #1a1a1a; /* Noir moderne */
+    color: white;
+    padding: 20px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%;
-    background: var(--white);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
 .logo {
-    font-size: 1.8rem;
+    font-size: 24px;
     font-weight: bold;
-    color: var(--dark);
+    letter-spacing: 2px;
+    color: #f39c12; /* Or/Orange pour le côté premium */
 }
 
-.logo span { color: var(--primary); }
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
 
-nav ul { display: flex; list-style: none; }
+nav ul li {
+    margin-left: 30px;
+}
+
 nav ul li a {
+    color: white;
     text-decoration: none;
-    color: var(--dark);
-    margin-left: 20px;
-    font-weight: 500;
     transition: 0.3s;
 }
 
-nav ul li a:hover { color: var(--primary); }
+nav ul li a:hover {
+    color: #f39c12;
+}
 
-/* Hero Section */
+/* La bannière principale (Hero) */
 .hero {
-    height: 60vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero-bg.jpg') center/cover;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c'); 
+    background-size: cover;
+    background-position: center;
+    height: 500px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    color: white;
     text-align: center;
-    color: var(--white);
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.btn-main {
+    background-color: #f39c12;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+/* Container et Titre */
+.container {
+    max-width: 1100px;
+    margin: 50px auto;
     padding: 0 20px;
 }
 
-.hero h1 { font-size: 3rem; margin-bottom: 10px; }
-
-.btn-principal {
-    display: inline-block;
-    background: var(--primary);
-    color: var(--white);
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 50px;
-    margin-top: 20px;
-    transition: 0.3s;
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #2c3e50;
 }
 
-/* Catalogue Grid */
-.container { padding: 50px 5%; }
-.section-title { text-align: center; margin-bottom: 40px; font-size: 2rem; }
-
-.grid-catalogue {
+/* La Grille (Magique pour l'alignement) */
+.grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
 }
 
+/* Style des Cartes */
 .card {
-    background: var(--white);
-    border-radius: 15px;
+    background: white;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    transition: transform 0.3s;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
-.card:hover { transform: translateY(-10px); }
+.card:hover {
+    transform: translateY(-10px); /* Petit effet de soulèvement */
+}
 
-.card-image img { width: 100%; height: 200px; object-fit: cover; }
+.card-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Pour que l'image ne soit pas déformée */
+}
 
-.card-info { padding: 20px; }
+.card-content {
+    padding: 20px;
+}
 
-.card-actions {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
+.card-content h3 {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+}
+
+.card-content p {
+    color: #7f8c8d;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.btn-card {
+    display: block;
+    text-align: center;
+    background: transparent;
+    border: 2px solid #f39c12;
+    color: #f39c12;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-card:hover {
+    background: #f39c12;
+    color: white;
+}
+.contact-section {
+    background-color: #ffffff;
+    padding: 60px 0;
+}
+
+.contact-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Très important pour l'alignement */
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #f39c12; /* Rappel de ta couleur accent */
+}
+/* Style du bouton WhatsApp */
+.whatsapp-container {
+    text-align: center;
+    margin: 30px 0; /* Espace au-dessus et en-dessous */
+}
+
+.btn-whatsapp {
+    display: inline-flex;
     align-items: center;
-}
-
-.btn-detail {
-    color: var(--primary);
+    gap: 12px;
+    background-color: #25D366; /* Le vert officiel WhatsApp */
+    color: white !important; /* Texte en blanc */
+    padding: 15px 30px;
+    border-radius: 50px; /* Bords bien arrondis */
     text-decoration: none;
     font-weight: bold;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-/* WhatsApp Flottant */
-.whatsapp-fixed {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25d366;
-    color: white;
-    padding: 15px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    z-index: 2000;
+.btn-whatsapp:hover {
+    background-color: #128C7E; /* Vert plus foncé au survol */
+    transform: translateY(-3px); /* Petit effet de soulèvement */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
 }
 
-/* Adaptation Écran (Mobile-First) */
-@media (max-width: 768px) {
-    nav { flex-direction: column; }
-    nav ul { margin-top: 15px; }
-    .hero h1 { font-size: 2rem; }
-    .whatsapp-fixed span { display: none; } /* On ne garde que l'icône sur petit mobile */
+.btn-whatsapp img {
+    filter: brightness(0) invert(1); /* Rend l'icône blanche pour mieux ressortir */
+}
+
+/*zone responsive*/
+@media(max-width:810px) {
+    nav {
+        max-height: auto !important;
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .nav-links {
+        display: flex;
+        align-items: flex-end;/* aligne le textes a partir de la droite*/
+        padding-right: 20px;/*met de l'espace entre le bord de la page et l''elt a droite*/
+        font-size: 10px;
+        gap:3px;
+
+
+    }
+    .logo{
+        font-size: 12px;
+        padding-left: 12px;
+    }
+    .hero{
+        height: 50vh;
+    }
+    .hero-text h1 {
+
+        font-size: 30px;
+        text-align: center;
+        text-wrap: balance;
+    }
+    .hero-text p {
+        font-size: small;
+        margin: 10px 0 60px 0;
+        text-wrap: balance;
+    }
+    .hero-text  {
+        padding-top: 40px 30px;
+    }
+
+    /*bouton explorer les plans*/
+    .btn-main{
+        margin-top: 100px;
+
+    }
+    .message {
+        text-wrap: balance;
+    }
+    .btn-whatsapp{
+        margin: 60px 0;
+        height: 15px;
+        font-size: small;/* taille de texte*/
+        display: flex;
+    }
+    .btn-submit{
+        margin: 40px 0;
+        height: 15px;
+        font-size: small;
+        display: flex;
+        align-items:  center;
+        justify-content: center;/* mettre le texte au centre du block*/
+        margin-bottom: 5px;
+        border-radius: 20px;
+    }
+    input{
+        height: 20px;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
 }
