@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails - Villa Horizon | IMMOPLAN</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">IMMO<span>PLAN</span></a></div>
+        <a href="index.html" class="btn-retour"><i class="fas fa-arrow-left"></i> Retour au catalogue</a>
+    </nav>
+
+    <main class="container-detail">
+        <section class="header-detail">
+            <h1>Villa Horizon - Design Moderne</h1>
+            <span class="badge-price">Plan Complet : Sur devis</span>
+        </section>
+
+        <section class="gallery-detail">
+            <div class="main-img">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750" alt="Vue principale">
+            </div>
+            <div class="thumbs">
+                <img src="plan-interieur1.jpg" alt="Plan du RDC">
+                <img src="salon.jpg" alt="Vue Salon">
+                <img src="cuisine.jpg" alt="Vue Cuisine">
+            </div>
+        </section>
+
+        <section class="specs-grid">
+            <div class="spec-item"><i class="fas fa-bed"></i> 4 Chambres</div>
+            <div class="spec-item"><i class="fas fa-bath"></i> 3 Douches</div>
+            <div class="spec-item"><i class="fas fa-expand-arrows-alt"></i> 180 m²</div>
+            <div class="spec-item"><i class="fas fa-car"></i> Garage 2 places</div>
+        </section>
+
+        <hr>
+
+        <section class="content-split">
+            <div class="description">
+                <h3>Description du projet</h3>
+                <p>La Villa Horizon est conçue pour les familles modernes recherchant luminosité et espace. Ce plan inclut un séjour ouvert de 50m², une suite parentale avec dressing, et une terrasse couverte idéale pour les moments en famille.</p>
+                
+                <h4>Contenu du dossier technique :</h4>
+                <ul>
+                    <li>Plans de distribution cotés</li>
+                    <li>Vues 3D (façades et intérieur)</li>
+                    <li>Plan de fondation et ferraillage</li>
+                </ul>
+            </div>
+
+            <div class="comments-section">
+                <h3>Avis clients</h3>
+                <div id="comment-list">
+                    <p><em>Aucun commentaire pour le moment. Soyez le premier !</em></p>
+                </div>
+                <form class="comment-form" onsubmit="event.preventDefault(); alert('Merci pour votre commentaire !');">
+                    <input type="text" placeholder="Votre nom" required>
+                    <textarea placeholder="Posez une question sur ce plan..." required></textarea>
+                    <button type="submit">Publier l'avis</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <a href="https://wa.me/237697338103" class="whatsapp-flottant" target="_blank">
+        <i class="fab fa-whatsapp"></i> <span>Acheter ce plan</span>
+    </a>
+
+</body>
+</html>
