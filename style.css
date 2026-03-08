@@ -295,3 +295,35 @@ nav ul li a:hover {
         font-size: 2rem;
     }
 }
+/* Style du bouton flottant */
+.whatsapp-flottant {
+    position: fixed; /* Le bouton reste en place même quand on défile */
+    bottom: 20px;    /* Distance du bas */
+    right: 20px;     /* Distance de la droite */
+    background-color: #25d366; /* Vert WhatsApp */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px; /* Forme arrondie élégante */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Ombre pour donner du relief */
+    z-index: 9999; /* Toujours au-dessus du reste */
+    transition: transform 0.3s;
+}
+
+.whatsapp-flottant:hover {
+    transform: scale(1.05); /* Petit effet de zoom au toucher */
+}
+
+/* Masquer le texte sur les très petits écrans pour plus de discrétion */
+@media (max-width: 480px) {
+    .whatsapp-flottant span {
+        display: none;
+    }
+    .whatsapp-flottant {
+        padding: 15px;
+    }
+}
